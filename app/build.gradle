@@ -27,5 +27,6 @@ dependencies {
     compile 'com.android.support:appcompat-v7:25.1.0'
     testCompile 'junit:junit:4.12'
     compile 'com.google.firebase:firebase-messaging:10.0.1'
+    compile "me.leolin:ShortcutBadger:1.1.16@aar"
 }
 apply plugin: 'com.google.gms.google-services'

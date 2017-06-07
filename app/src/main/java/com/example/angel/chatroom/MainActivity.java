@@ -7,6 +7,8 @@ import android.util.Log;
 
 import com.google.firebase.iid.FirebaseInstanceId;
 
+import me.leolin.shortcutbadger.ShortcutBadger;
+
 public class MainActivity extends AppCompatActivity {
     // SHA1 : E2:13:67:30:3A:DC:93:77:E5:10:88:F4:C3:10:C4:B2:67:FE:36:2D
     @Override
@@ -15,6 +17,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         String token = FirebaseInstanceId.getInstance().getToken();
         Log.d("FCM", "Token:"+token);
+        int badgeCount = 1;
+        ShortcutBadger.applyCount(getApplicationContext(), badgeCount);
     }
     @Override
     protected void onStart() {
